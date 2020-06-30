@@ -14,7 +14,9 @@ public class ProductConsumer {
         this.productRepository = productRepository;
     }
 
+    //TODO: completion + gutter
     @Topic("test-products")
+    @Topic("")
     @SendTo("test-product-quantities")
     public Integer receive(
             @KafkaKey String brand,
@@ -31,6 +33,7 @@ public class ProductConsumer {
     }
 
     @Topic("test-product-quantities")
+    @SendTo("${datasources.default.driverClassName}")
     public void updateQuantity(
             @KafkaKey String brand,
             Integer quantity) {

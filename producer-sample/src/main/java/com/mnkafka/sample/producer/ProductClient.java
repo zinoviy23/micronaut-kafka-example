@@ -5,8 +5,9 @@ import io.micronaut.messaging.annotation.*;
 import com.mnkafka.sample.domain.Product;
 
 @KafkaClient
-public interface ProductClient {
+public interface ProductClient extends ProductClientBase {
 
     @Topic("test-products")
     void sendProduct(@KafkaKey String brand, @Body Product product);
+
 }

@@ -1,4 +1,3 @@
-FROM openjdk:8u171-alpine3.7
-RUN apk --no-cache add curl
+FROM openjdk:11
 COPY build/libs/*-all.jar producer-sample.jar
 CMD java ${JAVA_OPTS} -jar producer-sample.jar

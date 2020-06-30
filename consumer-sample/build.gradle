@@ -19,7 +19,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom 'io.micronaut:micronaut-bom:1.0.1'
+        mavenBom 'io.micronaut:micronaut-bom:1.3.5'
     }
 }
 
@@ -30,7 +30,7 @@ dependencies {
     compile "io.micronaut:micronaut-validation"
     compile "io.micronaut:micronaut-runtime"
     compile "io.micronaut.configuration:micronaut-kafka"
-    compile "com.mnkafka.sample:domain:0.1"
+    compile project(':domain')
     compileOnly "io.micronaut:micronaut-inject-java"
     runtime "ch.qos.logback:logback-classic:1.2.3"
     compile "io.micronaut.configuration:micronaut-hibernate-jpa"
@@ -42,6 +42,10 @@ dependencies {
     testCompile "junit:junit:4.12"
     testCompile "io.micronaut:micronaut-inject-java"
     testCompile "org.hamcrest:hamcrest-all:1.3"
+    implementation "javax.xml.bind:jaxb-api:2.2.11"
+    implementation "com.sun.xml.bind:jaxb-core:2.2.11"
+    implementation "com.sun.xml.bind:jaxb-impl:2.2.11"
+    implementation "javax.activation:activation:1.1.1"
 }
 
 shadowJar {

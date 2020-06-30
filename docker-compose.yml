@@ -38,8 +38,7 @@ services:
       - kafka
 
   consumer-sample:
-    container_name: consumer-sample
-    image: micronaut-kafka-example/consumer-sample:0.1
+    build: ./consumer-sample
     environment:
       - 'KAFKA_BOOTSTRAP_SERVERS=//kafka:9092'
       - 'JDBC_USER=dbuser'
@@ -52,8 +51,7 @@ services:
       - kafka
 
   producer-sample:
-    container_name: producer-sample
-    image: micronaut-kafka-example/producer-sample:0.1
+    build: ./producer-sample
     environment:
       - 'KAFKA_BOOTSTRAP_SERVERS=//kafka:9092'
     ports:

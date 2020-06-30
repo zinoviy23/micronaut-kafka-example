@@ -1,0 +1,9 @@
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "aaaaa",
+  "quantity": 10,
+  "sku": "abcd-1232",
+  "brand": "Ke2"
+}

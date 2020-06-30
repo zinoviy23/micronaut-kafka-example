@@ -1,2 +1,4 @@
 include 'domain'
+include 'consumer-sample'
+include 'producer-sample'
 
