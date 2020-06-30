@@ -24,11 +24,10 @@ public class KafkaController {
         LOGGER.debug(message);
 //        productClient.sendProduct(product.getBrand(), product);
         productClient.sendProduct("test-products", product.getBrand(), product);
-        productClient.sendProduct("kekekekekek", product.getBrand(), product);
-        productClient.sendProduct("aaaaa", product.getBrand(), product);
-        productClient.sendProduct("bbbb", product.getBrand(), product);
-        productClient.sendProduct((("cccc")), product.getBrand(), product);
-        productClient.sendProduct("cccc" + "dddd", product.getBrand(), product);
+        productClient.sendProduct("prod-products", product.getBrand(), product);
+        productClient.sendProduct("users", product.getBrand(), product);
+        productClient.sendProduct("review", product.getBrand(), product);
+        productClient.sendProduct((("company")), product.getBrand(), product);
         productClient.sendProduct(kek, product.getBrand(), product);
         //TODO: reference in user's interface client
         productClient.sendProduct("", product.getBrand(), product);
